@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enhanced HTML5 Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        main {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background: #fafafa;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1rem;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 0.5rem;
+            text-align: left;
+        }
+        label {
+            display: block;
+            margin-top: 1rem;
+        }
+        .form-section {
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Registration Form</h1>
+        <nav aria-label="Form Sections">
+            <ul>
+                <li><a href="#personal">Personal Info</a></li>
+                <li><a href="#account">Account Details</a></li>
+                <li><a href="#preferences">Preferences</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form action="#" method="post" autocomplete="on">
+            <section id="personal" class="form-section">
+                <h2>Personal Information</h2>
+                <label>
+                    Full Name:
+                    <input type="text" name="fullname" placeholder="e.g. Jane Doe" required autocomplete="name">
+                </label>
+                <label>
+                    Email:
+                    <input type="email" name="email" placeholder="you@example.com" required autocomplete="email">
+                </label>
+                <label>
+                    Date of Birth:
+                    <input type="date" name="dob" required>
+                </label>
+                <label>
+                    Gender:
+                    <select name="gender" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                        <option value="other">Other</option>
+                    </select>
+                </label>
+            </section>
+
+            <section id="account" class="form-section">
+                <h2>Account Details</h2>
+                <label>
+                    Username:
+                    <input type="text" name="username" placeholder="Choose a username" required autocomplete="username">
+                </label>
+                <label>
+                    Password:
+                    <input type="password" name="password" placeholder="Create a password" required minlength="8" autocomplete="new-password">
+                </label>
+                <label>
+                    Confirm Password:
+                    <input type="password" name="confirm_password" placeholder="Repeat password" required minlength="8" autocomplete="new-password">
+                </label>
+                <label>
+                    Referral Code:
+                    <input type="text" name="referral" value="PLP2024" readonly>
+                </label>
+            </section>
+
+            <section id="preferences" class="form-section">
+                <h2>Preferences</h2>
+                <label>
+                    Favorite Color:
+                    <input type="color" name="favcolor" value="#3498db">
+                </label>
+                <label>
+                    Upload Profile Picture:
+                    <input type="file" name="profile_pic" accept="image/*">
+                </label>
+                <fieldset>
+                    <legend>Subscribe to:</legend>
+                    <label><input type="checkbox" name="newsletter" checked> Newsletter</label>
+                    <label><input type="checkbox" name="updates"> Product Updates</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Contact Method:</legend>
+                    <label><input type="radio" name="contact" value="email" required> Email</label>
+                    <label><input type="radio" name="contact" value="phone"> Phone</label>
+                </fieldset>
+            </section>
+
+            <section class="form-section">
+                <h2>Summary Table</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Field</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Full Name</td>
+                            <td>Jane Doe</td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td>you@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>Date of Birth</td>
+                            <td>1990-01-01</td>
+                        </tr>
+                        <tr>
+                            <td>Gender</td>
+                            <td>Female</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="form-section">
+                <h2>Instructions</h2>
+                <ol>
+                    <li>Fill in all required fields.</li>
+                    <li>Choose a strong password (min 8 characters).</li>
+                    <li>Upload a clear profile picture (optional).</li>
+                </ol>
+                <ul>
+                    <li>All information is kept confidential.</li>
+                    <li>Fields marked with * are required.</li>
+                </ul>
+            </section>
+
+            <section class="form-section">
+                <h2>Sample Media</h2>
+                <figure>
+                    <img src="https://via.placeholder.com/150" alt="Sample profile" width="150" height="150">
+                    <figcaption>Example Profile Picture</figcaption>
+                </figure>
+            </section>
+
+            <button type="submit">Register</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Enhanced Form Example</p>
+    </footer>
+</body>
+</html>
